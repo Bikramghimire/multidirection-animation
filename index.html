@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+            position: relative;
+        }
+        .box{
+
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color:crimson;
+            position: absolute;
+            top: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+        </div>
+    </div>
+    <script>
+        let toppos= 240;
+        let leftpos=0;
+        let ball=document.querySelector(".box");
+        var id=setInterval(animate,50);
+        function animate(){
+        if(toppos==480 && leftpos==240 )
+            {
+                clearInterval(id)
+                var id2=setInterval(()=>{
+                if(toppos==240 && leftpos==480 )
+               {
+                clearInterval(id2)
+               var id3=setInterval(()=>{
+                if(toppos==0 && leftpos==240 )    
+                {
+                clearInterval(id3);
+                var id4=setInterval(()=>{
+                 
+                 if(toppos==240 && leftpos==0 )
+                 //repated code start
+               {
+                clearInterval(id4);
+               setTimeout(location.reload(),1);
+            }
+            else{
+                toppos=toppos+5;
+                leftpos=leftpos-5;
+                ball.style.top=toppos+"px";
+                ball.style.left=leftpos+"px";
+            }
+                },50)
+                //end of repatedcode
+            }
+            else{
+                toppos=toppos-5;
+                leftpos=leftpos-5;
+                ball.style.top=toppos+"px";
+                ball.style.left=leftpos+"px";
+            }
+                },50)
+            }
+            else{
+                toppos=toppos-5;
+                leftpos=leftpos+5;
+                ball.style.top=toppos+"px";
+                ball.style.left=leftpos+"px";
+            }  
+                },50)
+            }
+            else{
+                toppos=toppos+5;
+                leftpos=leftpos+5;
+                ball.style.top=toppos+"px";
+                ball.style.left=leftpos+"px";
+            }
+        }
+      
+    </script>
+    
+</body>
+</html>
