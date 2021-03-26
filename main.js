@@ -9,7 +9,7 @@ function calculate(op1, op2) {
   ball.style.top = toppos + "px";
   ball.style.left = leftpos + "px";
 }
-setInterval(animate, 50);
+setInterval(animate, 30);
 function animate() {
   if (toppos >= 240 && toppos < 480 && leftpos >= 0 && leftpos < 240) {
     calculate("+", "+");
